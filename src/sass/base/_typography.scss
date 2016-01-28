@@ -1,4 +1,4 @@
-$golden: 1.414;
+$golden: 1.618;
 
 $base-font-size: 1.313rem;
 $base-line-height: 2.063rem;
@@ -63,8 +63,8 @@ h4, p, a, span, i, a, b, blockquote, li {
 }
 
 // Set margin default at 0
-h1, h2, h3, h4, p {
-	margin: 0;
+h1, h2, h3, h4, {
+	font-family: "Open Sans";
 }
 
 a {

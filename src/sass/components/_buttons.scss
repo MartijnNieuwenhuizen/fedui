@@ -1,12 +1,14 @@
 button {
+	border: none;
+	background-color: transparent;
 
 	&:hover {
 		
 	}
 	&:active {
-		oudline: none;
+		outline: none;
 	}
 	&:focus {
-		oudline: none;
+		outline: none;
 	}
 }

@@ -1,61 +1,19 @@
-/* make a flexbox grid!:
-.header,
-.footer  { flex: 1 100%; }
-.sidebar { flex: 1; }
-.main    { flex: 2; } 
+/* Grid with felxbox */
 
-https://css-tricks.com/almanac/properties/f/flex/
+$grid-col: 12.500rem;
+$grid-padding: .5rem;
 
-*/
-
-$golden: 1.61803398875;
-$max-container-width: 70em;
-
-$hero-block: 100vw;
-$xxlarge-block: $max-container-width;		/* 70rem */
-$xlarge-block: $xxlarge-block / $golden;	/* 43,2rem */
-$large-block: $xlarge-block / $golden;		/* 26,7rem */
-$medium-block: $large-block / $golden;		/* 16,5rem */
-$small-block: $medium-block / $golden;		/* 10,2rem */
-$tiny-block: $small-block / $golden;		/* 6,3rem */
-
-
-
-@mixin hero-block {
-	max-width: $hero-block;
+/* Math */
+@mixin col($multiply) {
+	width: #{$grid-col * $multiply};
+	padding: 0 $grid-padding;	
 }
-@mixin xxlarge-block {
-	max-width: $xxlarge-block;
-}
-@mixin xlarge-block {
-	max-width: $xlarge-block;
-}
-@mixin large-block {
-	max-width: $large-block;
-}
-@mixin medium-block {
-	max-width: $medium-block;
-}
-@mixin small-block {
-	max-width: $small-block;
-}
-@mixin tiny-block {
-	max-width: $tiny-block;
-}
-
-/* width: $max-container-width; */
-/* @include large-block; */
-
+/*MAX 6*/
+/*@include col(1);*/
 
 /* Gutters */
-$gutter: 1.312rem;
-$small-gutter: $gutter / $golden;
-$tiny-gutter: $small-gutter / $golden;
-$large-gutter: $gutter * $golden;
-$xlarge-gutter: $large-gutter * $golden;
-$xxlarge-gutter: $xlarge-gutter * $golden;
-
-
-
-
+$gutter-xlarge: 1em;
+$gutter-large: .75em;
+$gutter: $grid-padding;
+$gutter-small: .25em;
 

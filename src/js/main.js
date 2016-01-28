@@ -1,18 +1,53 @@
-// var MapHandler = require('./modules/map/mapHandler');
+// Head Images
+var us = document.querySelectorAll('.us');
+var header = document.querySelector('#welcome');
 
-// var main = new Main();
-// main.init();
+var erik = us[0];
+var martijn = us[1];
 
-// function Main() {
+window.onload = function() {
 
-// 	var _this = this;
-// 	var _mapHandler;
-// 	var _infboxHandler;
+	setTimeout( function(){
 
-// 	_this.init = function() {
+		erik.classList.add('slide-left');
+		martijn.classList.add('slide-right');
 
-// 	 	_mapHandler = new MapHandler();
+	}, 300);
 
-// 	}
+};
 
-// }
+document.onscroll = function() {
+	var headerHeight = header.offsetHeight;
+	var scroll = document.body.scrollTop;
+
+	if ( scroll > (headerHeight / 4) ) {
+		
+		erik.classList.remove('slide-left');
+		martijn.classList.remove('slide-right');
+
+	}
+	if ( scroll < (headerHeight / 4) ) {
+		
+		erik.classList.add('slide-left');
+		martijn.classList.add('slide-right');
+
+	}
+};
+
+
+// Dropdown Menu
+var dropdownButton = document.querySelector('#dropdown');
+var dropdownMenu = document.querySelector('.main-nav nav ul');
+
+dropdownMenu.classList.add('collaped-menu');
+dropdownButton.classList.add('uncross');
+
+dropdownButton.onclick = function() {
+
+	dropdownMenu.classList.toggle('collaped-menu');
+	dropdownMenu.classList.toggle('uncollaped-menu');
+
+	dropdownButton.classList.toggle('cross');
+	dropdownButton.classList.toggle('uncross');
+
+};

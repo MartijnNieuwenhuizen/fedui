@@ -4,5 +4,9 @@ body {
 }
 main {
 	margin: 0 auto;
-	padding: 0;
+	overflow: hidden;
+
+	> section {
+		padding: 0 #{$grid-padding * 2};
+	}
 }

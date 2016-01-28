@@ -1,0 +1,6 @@
+.small-text {
+	@include col(3);
+}
+.large-text {
+	@include col(4);
+}
